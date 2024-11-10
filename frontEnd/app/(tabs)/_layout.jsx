@@ -6,12 +6,21 @@ export default () => {
     <Tabs
       screenOptions={{
         tabBarStyle: {
-          backgroundColor: "black", // Background color for the entire tab bar
+          backgroundColor: "black", 
         },
-        tabBarActiveTintColor: "white", // Active icon color
-        tabBarInactiveTintColor: "#2B70E4", // Inactive icon color
+        tabBarActiveTintColor: "white", 
+        tabBarInactiveTintColor: "#2B70E4", 
       }}
     >
+      <Tabs.Screen
+        name="about"
+        options={{
+          tabBarButton: () => null,
+          headerShown: false,
+          tabBarShowLabel: false,
+        }}
+      />
+      
       <Tabs.Screen
         name="account"
         options={{
@@ -19,7 +28,7 @@ export default () => {
             <AntDesign
               name="team"
               size={32}
-              color={color} // Dynamically change color based on active/inactive state
+              color={color} 
             />
           ),
           headerShown: false,
@@ -33,7 +42,7 @@ export default () => {
             <Entypo
               name="home"
               size={32}
-              color={color} // Dynamically change color based on active/inactive state
+              color={color} 
             />
           ),
           headerShown: false,
@@ -74,6 +83,6 @@ export default () => {
           tabBarShowLabel: false,
         }}
       />
-    </Tabs>
+    </Tabs> 
   );
 };
